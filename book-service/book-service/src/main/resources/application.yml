@@ -1,0 +1,14 @@
+spring.application.name=book-service
+
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/bookdb
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 8081
