@@ -1,16 +1,20 @@
 server:
   port: 8082
+
 spring:
   application:
     name: order-service
   datasource:
-    url: jdbc:postgresql://postgres:5432/bookstore
+    url: jdbc:postgresql://postgres:5433/bookstore
     username: postgres
     password: password
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
   kafka:
     bootstrap-servers: kafka:9092
     consumer:
