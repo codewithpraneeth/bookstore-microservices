@@ -1,0 +1,13 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: book-service
+  data:
+    mongodb:
+      uri: mongodb://mongodb:27017/bookstore
+  kafka:
+    bootstrap-servers: kafka:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer

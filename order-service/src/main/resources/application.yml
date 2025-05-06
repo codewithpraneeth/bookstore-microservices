@@ -1,0 +1,18 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: order-service
+  datasource:
+    url: jdbc:postgresql://postgres:5432/bookstore
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  kafka:
+    bootstrap-servers: kafka:9092
+    consumer:
+      group-id: order-group
+      auto-offset-reset: earliest
